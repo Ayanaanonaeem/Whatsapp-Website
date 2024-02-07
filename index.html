@@ -1,11 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width:500px) {
+            body{
+                background-color:rgb(17, 27, 33);
+            }
+            
+            .box{
+                
+                /* border: 3px solid rgb(224, 27, 126); */
+                width: 1000px;
+                
+                /* height: 400px; */
+                /* background-color:rgb(17, 27, 33) ; */
+                float: none;
+                
+                
+                /* float: none; */
+                
+            }
+            .chat-1{
+                /* border: 1px solid rgb(100, 172, 109); */
+                /* background-color:rgb(17, 27, 33) ; */
+            }
+            .chat{
+                /* border: 1px solid rgb(0, 4, 255); */
+                /* background-color:rgb(17, 27, 33) ; */
+                width: 400px;
+
+            }
+            .h{
+                width: 450px;
+                /* border: 3px solid red; */
+                
+            }
+            .icon{
+                margin-right: 30px;
+                /* border:2px solid red; */
+                
+                /* float: right; */
+            }
+            
+            .box2{
+                display: none;
+               float: none;
+               border: none;
+            }
+            .box2 img{
+                height: 0px;
+                width: 0px;
+                /* display: none; */
+            }
+            .icon-2{
+                width: 0px;
+                height: 0px;
+                /* display: none; */
+                
+            }
+            .in{
+                width: 400px;
+                /* border: 1px solid red; */
+            }
+            .chat-1{
+                width: 400px;
+            }
+            input[type=search]{
+                width: 400px;
+                background-color: #202122;
+            }
+        }
+
+        .box {
+            width: 30%;
+            height: 1000px;
+            /* border: 2px solid red; */
+            background-color: rgb(17, 27, 33);
+            float: left;
+        }
+
+        .h {
+            padding: 10px 0px 10px 20px;
+            /* border: 1px solid green; */
+            color: white;
+            background-color: rgb(32, 44, 51);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .in {
+            /* border: 1px solid blue; */
+            padding: 10px 0px 10px 15px;
+        }
+
+        input[type=search] {
+            color: #424445;
+            background-color: transparent;
+            border: none;
+            width: 93%;
+            height: 25px;
+            background-color: rgb(32, 44, 51);
+            border: 1px solid #202122;
+            border-radius: 8px;
+            padding: 15px;
+            outline: none;
+
+        }
+
+        input:focus {
+            border-bottom: 3px solid rgb(9, 187, 9);
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .chat-1 {
+            /* border: 1px solid black; */
+            padding: 5px 0px;
+            margin-left: 15px;
+            margin-right: 20px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            position: relative;
+
+        }
+
+        .chat-1 img {
+            border-radius: 50%;
+
+        }
+
+        .name {
+            display: inline-block;
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 57px;
+            color: white;
+            font-size: 20px;
+            /* width: 250px; */
+            /* margin-bottom: 50px; */
+
+        }
+
+        .date {
+            display: inline-block;
+            /* border: 1px solid red; */
+            position: absolute;
+            right: 7px;
+            color: rgb(133, 132, 132);
+        }
+
+        .par {
+            display: inline-block;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 30px;
+            left: 54px;
+            color: rgb(177, 171, 171);
+        }
+
+        .chat-1:hover {
+            /* border-radius: 10px; */
+            background-color: rgb(42, 57, 66);
+        }
+
+        .icon {
+            /* border: 1px solid rgb(255, 0, 0); */
+            color: rgb(174, 186, 193);
+            font-size: 20px;
+        }
+        .icon-2 {
+            /* border: 1px solid rgb(255, 0, 0); */
+            color: rgb(174, 186, 193);
+            font-size: 20px;
+            margin: -20px 0px 20px 15px;
+            
+            
+
+        }
+        .box2{
+            width: 70%;
+            height: 1000px;
+            border: 1px solid rgb(38,47,52);
+            float: right;
+        }
+        .sub-1{
+            color: white;
+            background-color: rgb(32, 44, 51);
+            height: 47px;
+        }
+        .sub-3{
+            color: white;
+            background-color: rgb(32,44,51);
+            height: 80px;
+            margin-bottom: 30px;
+            padding-top: 40px;
+            position: relative;
+            bottom: 5px;
+        }
+        .chat-2 img{
+       border-radius: 50%;
+       margin: 5px 0px 0px 20px;
+       position: relative;
+        }
+        .name-2 {
+            display: inline-block;
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 471px;
+            color: white;
+            font-size: 20px;
+            /* width: 250px; */
+            /* margin-bottom: 50px; */
+
+        }
+        .par-2{
+            display: inline-block;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 23px;
+            left: 472px;
+            color: rgb(177, 171, 171);
+        }
+        input[type=text]{
+            width: 90%;
+            height: 30px;
+            padding-top: 0px;
+            background-color: rgb(42,57,66);
+            outline: none;
+            border: 1px solid rgb(42,57,66);
+            border-radius: 5px;
+            padding-right: 10px;
+           
+        }
+        
+    </style>
 </head>
+
 <body>
-    
+    <div class="box">
+        <div class="h">
+            <h2>Chats</h2>
+            <div class="icon">&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-users-line"></i>&nbsp;&nbsp;&nbsp;<i class="fa-regular fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;&nbsp;&nbsp;</div>
+        </div>
+        <div class="in"><input type="search" name="" id="" placeholder="Search or  start a new chat"></div>
+        <div class="chat">
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/bache.jpg" alt="">
+                <p class="name">Sister</p>
+                <p class="date">9:00am</p>
+                <p class="par">Main bilkul thk ap sunao</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/fairy-3347588_1280.png" alt="">
+                <p class="name">Lilly</p>
+                <p class="date">11:00am</p>
+                <p class="par">Assalamualikum</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/pica.jpg" alt="">
+                <p class="name">Ali</p>
+                <p class="date">5:00pm</p>
+                <p class="par">Kia krrahe ho?</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/picb.jpg" alt="">
+                <p class="name">Babarson</p>
+                <p class="date">9:00am</p>
+                <p class="par">Hn jani match ka kia huwa kon jeeta?</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/web.jpeg" alt="">
+                <p class="name">Umer</p>
+                <p class="date">3:00pm</p>
+                <p class="par">Main bilkul thk ap sunao</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/car.jpg" alt="">
+                <p class="name">Taha</p>
+                <p class="date">1:00pm</p>
+                <p class="par">Acha bhejta hun abhi hori der main </p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/business.jpeg" alt="">
+                <p class="name">Usman kala</p>
+                <p class="date">2:00am</p>
+                <p class="par">Hn kalle kidhr hai?</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/bache.jpg" alt="">
+                <p class="name">Bro</p>
+                <p class="date">9:00am</p>
+                <p class="par">Main bilkul thk ap sunao</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/bache.jpg" alt="">
+                <p class="name">Bro</p>
+                <p class="date">9:00am</p>
+                <p class="par">Main bilkul thk ap sunao</p>
+            </div>
+            <div class="chat-1"><img width="50px " height="50px" src="./pics/bache.jpg" alt="">
+                <p class="name">Bro</p>
+                <p class="date">9:00am</p>
+                <p class="par">Main bilkul thk ap sunao</p>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+    <div class="box2">
+        <div class="sub-1"><div class="chat-2"><img width="35px " height="35px" src="./pics/car.jpg" alt="">
+            <p class="name-2">Taha</p><br><p class="par-2">Business account</p>
+        </div>
+        <img width="100%" height="530px" src="https://wallpapercave.com/wp/wp6988787.png" alt=""><div class="sub-3">
+            <div class="icon-2"><i class="fa-solid fa-face-smile"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-plus"></i>&nbsp;&nbsp;<input type="text" name="" id="" placeholder="&nbsp; Type a message"></div>
+            
+
+        </div>
+       
+    </div>
 </body>
+
 </html>
